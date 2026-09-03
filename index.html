@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satta Market Community | Telegram</title>
+<meta name="description" content="Satta Market community updates and discussion channel. Please participate only where permitted by applicable law.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Satta Market Community">
+<meta property="og:description" content="Community updates and discussion on Telegram.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#111111">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ================= META PIXEL =================
+     Replace META_PIXEL_ID with your actual approved Pixel ID.
+     PageView fires on page load.
+==================================================== -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'META_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+
+<style>
+:root{
+  --bg:#f5f5f5;
+  --card:#ffffff;
+  --black:#171717;
+  --black2:#242424;
+  --red:#e3261a;
+  --red-dark:#b9150c;
+  --gold:#f4c400;
+  --text:#222;
+  --muted:#666;
+  --border:#e2e2e2;
+  --telegram:#229ED9;
+  --telegram-dark:#1686bb;
+  --radius:16px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(227,38,26,.08), transparent 32%),
+    var(--bg);
+  color:var(--text);
+  font-family:"Noto Sans Devanagari",Inter,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+
+.page{
+  width:100%;
+  max-width:470px;
+  margin:0 auto;
+  padding:18px 14px 35px;
+}
+
+/* TOP BAR */
+.topbar{
+  background:var(--black);
+  color:#fff;
+  border-radius:6px;
+  min-height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:8px 10px;
+  font-size:17px;
+  font-weight:800;
+  line-height:1.25;
+  letter-spacing:.1px;
+  box-shadow:0 4px 14px rgba(0,0,0,.12);
+}
+.topbar span{color:var(--gold)}
+
+/* LOGO */
+.logo-wrap{
+  margin:22px auto 16px;
+  width:190px;
+  min-height:145px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.logo{
+  max-width:190px;
+  max-height:145px;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+.logo-placeholder{
+  width:150px;
+  height:130px;
+  border:2px dashed #aaa;
+  border-radius:18px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#777;
+  font-size:13px;
+  padding:12px;
+}
+
+/* HEADING */
+.heading{
+  background:var(--black);
+  color:#fff;
+  border-radius:6px;
+  padding:10px 8px;
+  text-align:center;
+  font-size:23px;
+  font-weight:800;
+  letter-spacing:.2px;
+  margin-bottom:18px;
+}
+
+/* INTRO */
+.intro{
+  text-align:center;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px 16px;
+  box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+.intro .red{
+  color:var(--red);
+  font-weight:800;
+  font-size:20px;
+  line-height:1.5;
+}
+.intro p{
+  margin-top:12px;
+  font-size:15px;
+  line-height:1.8;
+  color:#444;
+}
+.notice{
+  margin-top:13px;
+  padding:10px 11px;
+  background:#fff8dc;
+  border:1px solid #f0d77a;
+  border-radius:10px;
+  color:#624f00;
+  font-size:12px;
+  line-height:1.65;
+}
+
+/* TELEGRAM CTA */
+.telegram-button{
+  width:100%;
+  min-height:62px;
+  margin:18px 0 8px;
+  border:3px solid var(--red);
+  border-radius:14px;
+  background:var(--black);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  cursor:pointer;
+  font-size:19px;
+  font-weight:800;
+  box-shadow:0 8px 20px rgba(0,0,0,.16);
+  animation:pulse 1.65s infinite;
+  transition:transform .15s ease, background .2s ease;
+}
+.telegram-button:hover{background:#202020;transform:translateY(-1px)}
+.telegram-button:active{transform:scale(.98)}
+
+.telegram-icon{
+  width:29px;
+  height:29px;
+  flex:0 0 29px;
+}
+.telegram-icon svg{display:block;width:100%;height:100%}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(34,158,217,.58),0 8px 20px rgba(0,0,0,.16)}
+  70%{box-shadow:0 0 0 13px rgba(34,158,217,0),0 8px 20px rgba(0,0,0,.16)}
+  100%{box-shadow:0 0 0 0 rgba(34,158,217,0),0 8px 20px rgba(0,0,0,.16)}
+}
+
+.join-hint{
+  text-align:center;
+  color:#333;
+  font-size:15px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+.feature{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:13px;
+  padding:13px 14px;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  box-shadow:0 3px 12px rgba(0,0,0,.04);
+}
+.feature-icon{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#fff1ef;
+  color:var(--red);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 34px;
+  font-weight:800;
+}
+.feature strong{display:block;font-size:14px}
+.feature small{display:block;color:#777;font-size:11px;margin-top:2px}
+
+/* RESPONSIBLE PLAY */
+.responsible{
+  margin-top:18px;
+  padding:15px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  text-align:left;
+}
+.responsible h2{
+  font-size:15px;
+  margin-bottom:7px;
+  color:#222;
+}
+.responsible p{
+  font-size:11.5px;
+  line-height:1.7;
+  color:#666;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid #ddd;
+  text-align:center;
+  color:#777;
+  font-size:10.5px;
+  line-height:1.7;
+}
+.footer a{
+  color:#555;
+  text-decoration:underline;
+}
+.age{
+  display:inline-block;
+  margin-top:7px;
+  font-weight:800;
+  color:#555;
+}
+
+@media(max-width:360px){
+  .topbar{font-size:15px}
+  .heading{font-size:20px}
+  .intro .red{font-size:18px}
+  .telegram-button{font-size:17px}
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+
+  <div class="topbar">
+    <span>सत्ता मार्केट</span>&nbsp; • &nbsp;Telegram Community
+  </div>
+
+  <!-- Replace "YOUR-LOGO.png" with your own logo file later -->
+  <div class="logo-wrap">
+    <img class="logo"
+         src="YOUR-LOGO.png"
+         alt="Satta Market Community Logo"
+         onerror="this.style.display='none';document.getElementById('logoPlaceholder').style.display='flex';">
+    <div id="logoPlaceholder" class="logo-placeholder" style="display:none;">
+      आपका लोगो यहां लगाएं<br><br>
+      YOUR-LOGO.png
+    </div>
+  </div>
+
+  <h1 class="heading">SATTA MARKET COMMUNITY</h1>
+
+  <section class="intro">
+    <div class="red">सट्टा मार्केट कम्युनिटी अपडेट्स</div>
+
+    <p>
+      हमारे Telegram community में market-related updates,
+      discussion और सामान्य जानकारी साझा की जाती है।
+    </p>
+
+    <div class="notice">
+      यह पेज किसी जीत, मुनाफ़े या परिणाम की गारंटी नहीं देता।
+      किसी भी real-money activity में भाग लेने से पहले अपने क्षेत्र के
+      लागू कानून और नियमों की जांच करें।
+    </div>
+  </section>
+
+  <button class="telegram-button" type="button" onclick="joinTelegram()">
+    <span class="telegram-icon" aria-hidden="true">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="120" cy="120" r="120" fill="#ffffff"/>
+        <path d="M170.6 72.3 148 178.2c-1.7 7.6-6.2 9.5-12.5 5.9l-34.6-25.5-16.7 16.1c-1.8 1.8-3.4 3.4-6.9 3.4l2.5-35.1 63.8-57.7c2.8-2.5-.6-3.9-4.3-1.4l-78.9 49.7-34-10.6c-7.4-2.3-7.5-7.4 1.5-11l133-51.3c6.1-2.3 11.5 1.5 9.7 11.6Z" fill="#229ED9"/>
+      </svg>
+    </span>
+    JOIN TELEGRAM CHANNEL
+  </button>
+
+  <div class="join-hint">👇 Telegram पर जुड़ें 👇</div>
+
+  <section class="features" aria-label="Community features">
+    <div class="feature">
+      <div class="feature-icon">✓</div>
+      <div>
+        <strong>Community Updates</strong>
+        <small>Regular information and discussion</small>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">✓</div>
+      <div>
+        <strong>Telegram Discussion</strong>
+        <small>Community-based conversations</small>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">✓</div>
+      <div>
+        <strong>Clear Information</strong>
+        <small>No guaranteed-result claims</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="responsible">
+    <h2>⚠️ जिम्मेदार भागीदारी</h2>
+    <p>
+      यदि आपके क्षेत्र में इस प्रकार की activity प्रतिबंधित है, तो इसमें
+      भाग न लें। केवल वही गतिविधि करें जो आपके स्थानीय कानूनों के अनुसार
+      वैध हो। नुकसान की भरपाई के लिए अधिक पैसा न लगाएं और अपनी आर्थिक
+      क्षमता से अधिक जोखिम न लें।
+    </p>
+  </section>
+
+  <footer class="footer">
+    <div>
+      18+ only where legally applicable. Eligibility and legality may vary
+      by location.
+    </div>
+    <div class="age">18+ &nbsp; • &nbsp; Play responsibly</div>
+    <div style="margin-top:8px;">
+      <a href="#" onclick="return false;">Privacy</a>
+      &nbsp;|&nbsp;
+      <a href="#" onclick="return false;">Terms</a>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+const TELEGRAM_LINK = "https://t.me/+zringdmOIwZlODBl";
+
+function joinTelegram(){
+  // Lead = user intentionally clicked the Telegram CTA.
+  if (typeof fbq === "function") {
+    fbq("track", "Lead");
+  }
+
+  // Small delay gives the browser a moment to dispatch the event.
+  setTimeout(function(){
+    window.location.href = TELEGRAM_LINK;
+  }, 120);
+}
+</script>
+
+</body>
+</html>
